@@ -5,6 +5,6 @@ const express = require('express');
 const app =  express();
 
 app.use ('/api', api);
-app.use ('html', html);
+app.use ('/notes', html);
 
 module.exports = app;
