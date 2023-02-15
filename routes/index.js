@@ -1,10 +1,15 @@
-const html = require('./html-routes');
-const api = require('./api-routes');
-const express = require('express');
+const router = require('express').Router()
+const path = require('path');
+router.get('/notes', (req, res) => {
+    console.log(req.body);
+    
+    res.sendFile(path.join(__dirname, '../db/db.json'))
 
-const app =  express();
-
-app.use ('/api', api);
-app.use ('/notes', html);
-
-module.exports = app;
+})
+router.post('/notes', (req, res) => {
+ console.log(req.body)
+})
+router.delete('/notes/:id', (req, res) => {
+    console.log(req)
+})
+module.exports = router
