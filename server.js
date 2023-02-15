@@ -2,6 +2,7 @@ const express = require('express')
 const router = require('./routes')
 const fs = require('fs/promises');
 const path = require('path');
+const { readFromFile, readAndAppend } = require('./helpers/fsUtils');
 
 const PORT= 3001;
 
@@ -11,8 +12,8 @@ app.use(express.urlencoded({extended: true }));
 app.use(express.static('public'));
 app.use('/api', router)
 
-app.get('/notes', (req, res) => {
-
+app.get('*', (req, res) => {
+console.log('notes')
 res.sendFile(path.join(__dirname, '/public/notes.html'));
 })
 
