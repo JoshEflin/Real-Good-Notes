@@ -19,11 +19,10 @@ router.post('/notes', (req, res) => {
  }
  readAndAppend(noteObj, "./db/db.json" );
  const response = {
-    status:'yay',
+    status:'success',
     body : noteObj 
  }
 res.json(response);
- console.log('post')
 })
 router.delete('/notes/:id', (req, res) => {
     const noteID = req.params.id  
@@ -33,6 +32,5 @@ router.delete('/notes/:id', (req, res) => {
         writeToFile('./db/db.json', result);
         res.json(result)
     })
-    console.log('del')
 })
 module.exports = router
