@@ -2,7 +2,7 @@ const express = require('express')
 const router = require('./routes')
 const fs = require('fs/promises');
 const path = require('path');
-const { readFromFile, readAndAppend } = require('./helpers/fsUtils');
+
 
 const PORT= 3001;
 
