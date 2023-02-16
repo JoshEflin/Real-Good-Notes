@@ -6,16 +6,19 @@ This project is an excersize in reverse engineering a back end  for a prebuilt f
 
 ## Table of Contents
 - [License](#license)
+- [User-Story](#user-story)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Screenshots](#Screenshots)
 - [Contributing](#contributing)
 - [Tests](#tests)
+- [Links](#links)
 - [Questions](#Questions)
 
 ## License
  This repository is licensed under
     MIT
-## User Story
+## User-Story
 GIVEN a note-taking application
 WHEN I open the Note Taker
 THEN I am presented with a landing page with a link to a notes page
@@ -36,11 +39,18 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 ## Usage
  A User can use this Application to take notes.
 
+## Screenshots
+[screenshot](./img/Screenshot.png)
+
 ## Contributing
  [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md) Contributions adhere to the Contributor Covenant, for more information go to https://www.contributor-covenant.org/
 
 ## Tests
  Testing was not involved in the creation of this application.
+
+## Links
+The Deployed app is located at the below URL
+https://note-taker934823.herokuapp.com/
 
 ## Questions
 
