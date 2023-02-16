@@ -1,10 +1,9 @@
 const fs = require('fs/promises');
 
-
-// Promise version of fs.readFile
-
+// read the file
 const readFromFile = fs.readFile;
 
+// writes the data from the front end into the db.json file
 const writeToFile = (destination, content) => {
   fs.writeFile(destination, JSON.stringify(content, null, 4))
   .then((data) => {
@@ -14,8 +13,7 @@ const writeToFile = (destination, content) => {
     console.error(err)
   })
 }
-
-
+// reads in the db.json file and adds the new data, then sends back the old data with new data appended.
 const readAndAppend = (content, file) => {
   fs.readFile(file, 'utf8')
    .then((data)=> {
