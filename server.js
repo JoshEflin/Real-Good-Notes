@@ -13,10 +13,14 @@ app.use(express.static('public'));
 // allows the server to find routes by talking to the index.js file in the routes folder
 app.use('/api', router)
 
+app.get("/notes", (req, res) => { 
+    res.sendFile(path.join(__dirname, "/public/notes.html"))
 // if there is a typo in the URL after the /, get * ignores it and treats it as the root
-app.get('*', (req, res) => {
+app.get('/*', (req, res) => {
 console.log('notes')
-res.sendFile(path.join(__dirname, '/public/notes.html'));
+    res.sendFile(path.join(__dirname, '/public/index.html'));
+})
+
 })
 
 
