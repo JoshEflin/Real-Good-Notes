@@ -7,10 +7,10 @@ const readFromFile = fs.readFile;
 const writeToFile = (destination, content) => {
   fs.writeFile(destination, JSON.stringify(content, null, 4))
   .then((data) => {
-    console.info(`\nData written to ${destination}`)
+    console.info(`\nData written to ${destination}`);
 })
   .catch((err) => {
-    console.error(err)
+    console.error(err);
   })
 }
 // reads in the db.json file and adds the new data, then sends back the old data with new data appended.
@@ -20,7 +20,6 @@ const readAndAppend = (content, file) => {
    const parsedData = JSON.parse(data);
       parsedData.push(content);
       writeToFile(file, parsedData); 
-    console.log(data)
    })
     .catch((err) =>{
       console.error(err);  
